@@ -36,14 +36,14 @@ body{
   justify-content: space-between;
 }
 
-.page-name{
+.results-page-name{
   color: black;
   flex:1;
   text-align: center;
 
 }
 
-.blurb{
+.results-blurb{
   flex:3;
   text-align: center;
   padding: 2% 1%;

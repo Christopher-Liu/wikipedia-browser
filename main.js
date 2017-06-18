@@ -8,13 +8,13 @@ $(document).ready(function() {
   var searchAPIURL = "https://en.wikipedia.org/w/api.php?action=query&list=search&utf8=1&srsearch=";
 
   $("#search-button").on("click", function(){
-    var searchTerm = $(".search-input").val();
+    var searchTerm = $(".user-search-query").val();
     wikiSearch(searchTerm);
   });        //End of search button function
 
-  $(".search-input").keydown(function (e){
+  $(".user-search-query").keydown(function (e){
     if (e.keyCode == 13) {
-      var searchTerm = $(".search-input").val();
+      var searchTerm = $(".user-search-query").val();
       wikiSearch(searchTerm);
     }
   });        //End of input bar function
@@ -36,7 +36,7 @@ $(document).ready(function() {
           $(".search-results").children().each(function() {
             var pageName = res.query.search[counter].title;
             var blurb = res.query.search[counter].snippet;
-            $(this).html("<a href = \"https://en.wikipedia.org/wiki/"+ pageName + "\" class=\"page-name\">" + pageName + "</a><p class=\"blurb\">" + blurb + "...</p>")
+            $(this).html("<a href = \"https://en.wikipedia.org/wiki/"+ pageName + "\" class=\"results-page-name\">" + pageName + "</a><p class=\"results-blurb\">" + blurb + "...</p>")
             counter ++;
           });
         };
@@ -44,32 +44,5 @@ $(document).ready(function() {
     });     // End of wikiSearch function
   }
 
-
-
-/*
-  function wikiSearch(userInput) {
-    $.ajax({
-      url: searchAPIURL+userInput+"&format=json&callback=?",
-      async: false,
-      dataType: "json",
-      success: function(res){
-        //To get rid of old search results before displaying any new ones
-        $(".search-results").children().html("");
-
-        // Handling cases for which the API returns no results
-        if (res.query.search.length == 0) {
-          $(".search-results").append("<p>No search results! Try again.<\p>");
-        } else {
-          for (var i = 0; i < res.query.search.length; i++) {
-            // We create the list of search results by appending list elements to the "search-results" unordered list on the webpage
-            var pageName = res.query.search[i].title;
-            var blurb = res.query.search[i].snippet;
-            $(".search-results").children().html("<a href = \"https://en.wikipedia.org/wiki/"+ pageName + "\" class=\"page-name\">" + pageName + "</a><p class=\"blurb\">" + blurb + "...</p>");
-          };
-        };
-      }
-    });     // End of wikiSearch function
-  }
-*/
 
 });
