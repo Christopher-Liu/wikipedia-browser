@@ -1,0 +1,63 @@
+body{
+  background: #2A3132;
+  font-family: Arial;
+}
+
+.container{
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-title{
+  font-size: 2.5em;
+  color: #C4DFE6;
+  text-align: center;
+}
+
+.input-forms{
+  text-align: center;
+}
+
+.user-search-query{
+  width: 100%;
+  max-width: 800px;
+}
+
+.form-buttons{
+
+}
+
+.results-link{
+  display: flex;
+  background-color: #90AFC5;
+  border-radius: 3%;
+  margin: 1% 0;
+  justify-content: space-between;
+}
+
+.page-name{
+  color: black;
+  flex:1;
+  text-align: center;
+
+}
+
+.blurb{
+  flex:3;
+  text-align: center;
+  padding: 2% 1%;
+}
+
+
+
+.footer{
+  float:right;
+}
+
+.footer-item{
+  text-align: right;
+  color: #d3d3d3;
+  margin: 0 0 -3% 0;
+  font-size: 80%;
+}
