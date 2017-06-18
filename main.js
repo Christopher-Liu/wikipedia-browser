@@ -31,12 +31,15 @@ $(document).ready(function() {
         $(".search-results").children().html("");
 
         if (res.query.search.length == 0) {
-          $(".search-results").append("<p>No search results! Try again.</p>");
+          $(".search-results").children().removeClass("searched");
+          $(".search-results").append("<p class=\"failed-message\">No search results! Try again.</p>");
         } else {
           $(".search-results").children().each(function() {
             var pageName = res.query.search[counter].title;
             var blurb = res.query.search[counter].snippet;
             $(this).html("<a href = \"https://en.wikipedia.org/wiki/"+ pageName + "\" class=\"results-page-name\">" + pageName + "</a><p class=\"results-blurb\">" + blurb + "...</p>")
+            $(this).addClass("searched");
+
             counter ++;
           });
         };

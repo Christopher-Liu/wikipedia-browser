@@ -32,15 +32,21 @@ body{
   display: flex;
   background-color: #90AFC5;
   border-radius: 3%;
-  margin: 1% 0;
+  margin: 15px 0;
   justify-content: space-between;
+  opacity: 0;
+
+  -webkit-transition: all .5s ease-in;
+  -moz-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+  -ms-transition: all .5s ease-in;
+  transition: all .5s ease-in;
 }
 
 .results-page-name{
   color: black;
   flex:1;
   text-align: center;
-
 }
 
 .results-blurb{
@@ -49,15 +55,13 @@ body{
   padding: 2% 1%;
 }
 
-
-
-.footer{
-  float:right;
+.failed-message{
+  color: white;
+  text-align: center;
 }
 
-.footer-item{
-  text-align: right;
-  color: #d3d3d3;
-  margin: 0 0 -3% 0;
-  font-size: 80%;
+
+
+.searched{
+  opacity: 1;
 }
