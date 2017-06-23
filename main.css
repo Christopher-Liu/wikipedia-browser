@@ -1,18 +1,19 @@
 body{
-  background: #2A3132;
+  background: #0078B2;
   font-family: 'Raleway', sans-serif;
+  padding: 0 0;
 }
 
 .container{
-  width: 90%;
+  width: 95%;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .page-title{
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: 700;
-  color: #C4DFE6;
+  color: #E3B23C;
   text-align: center;
 }
 
@@ -21,21 +22,34 @@ body{
 }
 
 .user-search-query{
-  width: 100%;
-  max-width: 800px;
+  width: 75%;
+  font-size: 1.5em;
+  border-radius: 6px;
+  padding: 2px 2px;
+  margin: 0 0;
 }
 
-.form-buttons{
-
+.input-forms i{
+  color: #E3B23C;
 }
+
+#rand-button{
+  margin: 0 0 2% 0;
+}
+
+
+.input-forms i:hover{
+  color: white;
+}
+
+
+
 
 .results-link{
-  display: flex;
-  background-color: #90AFC5;
+  background-color: #EDEBD7;
   border-radius: 3%;
   margin: 15px 0;
-  justify-content: space-between;
-  text-align: center;
+  padding: 1% 2%;
   opacity: 0;
 
   -webkit-transition: all .5s ease-in;
@@ -48,16 +62,9 @@ body{
 .results-page-name{
   color: black;
   font-weight: 700;
+  font-size: 1.25em;
   text-decoration: none;
-  flex:1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.results-blurb{
-  flex:3;
-  padding: 2% 1%;
+  margin: 0 0 1% 0;
 }
 
 .failed-message{
@@ -65,8 +72,15 @@ body{
   text-align: center;
 }
 
-
-
 .searched{
   opacity: 1;
+}
+
+
+
+@media(min-width:768px){
+  .user-search-query{
+    width: 50%;
+    font-size: 1.75em;
+  }
 }

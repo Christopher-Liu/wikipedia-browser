@@ -37,7 +37,7 @@ $(document).ready(function() {
           $(".search-results").children().each(function() {
             var pageName = res.query.search[counter].title;
             var blurb = res.query.search[counter].snippet;
-            $(this).html("<a href = \"https://en.wikipedia.org/wiki/"+ pageName + "\" class=\"results-page-name\">" + pageName + "</a><p class=\"results-blurb\">" + blurb + "...</p>")
+            $(this).html("<a href = \"https://en.wikipedia.org/wiki/"+ pageName + "\" class=\"results-page-name\"><p>" + pageName + "</p></a> <p class=\"results-blurb\">" + blurb + "...</p>")
             $(this).addClass("searched");
 
             counter ++;
